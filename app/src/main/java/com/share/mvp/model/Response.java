@@ -21,18 +21,18 @@ public class Response<T>
      * msg : success
      */
 
-    private int status;
+    private int code;
     private String msg;
-    private T result;
+    private T data;
 
     public int getStatus()
     {
-        return status;
+        return code;
     }
 
     public void setStatus(int status)
     {
-        this.status = status;
+        this.code = status;
     }
 
     public String getMsg()
@@ -47,28 +47,20 @@ public class Response<T>
 
     public T getResult()
     {
-        return result;
+        return data;
     }
 
     public void setResult(T result)
     {
-        this.result = result;
+        this.data = result;
     }
 
     public boolean isSuccess()
     {
-        return 1 == getStatus();
+        return 200 == getStatus();
     }
 
-    /**
-     * token已失效
-     *
-     * @return
-     */
-    public boolean isToken()
-    {
-        return -2 == getStatus();
-    }
+
 
     @Override
     public String toString()
@@ -86,9 +78,9 @@ public class Response<T>
                     }
                 }).create();
         return "Response--->{" +
-                "\"status\":\"" + status + '\"' +
+                "\"status\":\"" + code + '\"' +
                 ", \"msg\":\"" + msg + '\"' +
-                ", \"result\":" + gson.toJson(result) +
+                ", \"result\":" + gson.toJson(data) +
                 '}';
     }
 }

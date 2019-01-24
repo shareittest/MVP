@@ -7,7 +7,7 @@ package com.share.mvp.config;
 public class Constant
 {
     //测试
-    private static final String SERVER = "";
+    private static final String SERVER = "https://www.apiopen.top";
 
     //正式
     //private static final String SERVER = "";

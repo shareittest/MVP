@@ -191,11 +191,6 @@ public class BasePresenter implements IPresenter
                         {
                             callBack.onSuccess(gson.toJson(s.getResult()));
                         }
-                        else if (s.isToken())
-                        {
-                            if (!TextUtils.isEmpty(s.getMsg()))
-                                iBaseView.showTokenNotice(s.getMsg());
-                        }
                         else
                         {
                             if (!TextUtils.isEmpty(s.getMsg()))

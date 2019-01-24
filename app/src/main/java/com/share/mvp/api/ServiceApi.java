@@ -20,7 +20,7 @@ public interface ServiceApi
     Observable<Response> login(@Body RequestBody body);
 
     //版本更新
-    @GET("versionAndroid")
+    @GET("satinGodApi?type=1&page=1")
     Observable<Response> versionAndroid();
 
 }
